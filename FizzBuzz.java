@@ -1,24 +1,20 @@
-import java.util.Scanner;
-
 public class FizzBuzz {
     public static void main (String [] args) {
-        Scanner in = new Scanner(System.in);
-        System.out.print("Give me a number between 1 and 100: ");
-        int number = in.nextInt();
-
-        if ((number > 0) && (number < 101)){
-            if(number % 3 == 0) {
-                System.out.print("Fizz");
+       
+        
+        for (int i = 0; i <= 100; i ++) {
+            if ((i % 3 == 0) && (i % 5 == 0)) {
+                System.out.println("Fizzbuzz");
             }
-            if(number % 5 == 0) {
-                System.out.print("Buzz");
+            else if (i % 3 == 0) {
+                System.out.println("Fizz");
             }
-            if ((number % 3 != 0) && (number % 5 != 0)) {
-                System.out.print(number);
+            else if(i % 5 == 0) {
+                System.out.println("Buzz");
             }
-        }
-        else {
-            System.out.println("Incorrect output");
+             else {
+                System.out.println(i);
+            }
         }
     }
 }
